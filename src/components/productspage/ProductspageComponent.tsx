@@ -3,11 +3,21 @@
 import '../../styles/globals.css';
 import Navbar from '../navbar/NavComponent';
 import Productcard from '../productcard/ProductcardComponent';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Productmodal from '../productmodal/ProductmodalComponent';
+import { useRouter } from 'next/router';
 
 
-export default function ProductPage() {
+export default function ProductsPage() {
+    const router = useRouter();
+
+    useEffect(() => {
+        const auth = localStorage.getItem('token');
+        if (auth == null || auth == undefined) {
+            router.push('/signin');
+        }
+    }, [])
+
     const [isProductModalOpen, setisProductModalOpen] = useState(false);
     const [clickedItem, setclickedItem] = useState(0)
 

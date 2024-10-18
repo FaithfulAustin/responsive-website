@@ -4,10 +4,13 @@
 import '../../styles/globals.css';
 import Navbar from '../navbar/NavComponent';
 import Link from 'next/link';
+import React, { ReactNode, useEffect } from 'react'
+import { useRouter } from 'next/router';
 
 
-export default function cart() {
+export default function Cart() {
 
+    
     const cartData = [
 
         {
@@ -35,6 +38,16 @@ export default function cart() {
 
     ]
 
+    const router = useRouter();
+
+    useEffect(() => {
+        const auth = localStorage.getItem('token');
+        if (auth == null || auth == undefined) {
+            router.push('/signin');
+        }
+    }, [])
+
+
     return (
         <>
             <Navbar />
@@ -53,7 +66,7 @@ export default function cart() {
                                         <div className="flex items-start justify-between">
                                             <h2 className="text-lg font-medium text-gray-900" id="slide-over-title">Shopping cart</h2>
 
-                                            <Link href="/product">
+                                            <Link href="/products">
                                                 <div className="ml-3 flex h-7 items-center">
                                                     <button type="button" className="relative -m-2 p-2 text-gray-400 hover:text-gray-500">
                                                         <span className="absolute -inset-0.5"></span>
@@ -71,7 +84,7 @@ export default function cart() {
                                             <div className="flow-root">
                                                 <ul role="list" className="-my-6 divide-y divide-gray-200">
                                                     {cartData.map((product, idx: number) => (                                            
-                                                        <li className="flex py-6">
+                                                        <li key={idx} className="flex py-6">
                                                         <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
                                                             <img src={product.img} alt="Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt." className="h-full w-full object-cover object-center" />
                                                         </div>

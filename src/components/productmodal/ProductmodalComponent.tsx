@@ -48,7 +48,7 @@ const Productmodal: React.FC<ProductCardProps> = ({ productName, price, img }) =
 
                         <p className="text-2xl text-gray-900">${price}</p>
 
-                        <div className="mt-6">
+                        {/* <div className="mt-6">
                           <h4 className="sr-only">Reviews</h4>
                           <div className="flex items-center">
                             <div className="flex items-center">
@@ -72,7 +72,7 @@ const Productmodal: React.FC<ProductCardProps> = ({ productName, price, img }) =
                             <p className="sr-only">3.9 out of 5 stars</p>
                             <a href="#" className="ml-3 text-sm font-medium text-indigo-600 hover:text-indigo-500">117 reviews</a>
                           </div>
-                        </div>
+                        </div> */}
                       </section>
 
                       <section aria-labelledby="options-heading" className="mt-10">
@@ -80,7 +80,7 @@ const Productmodal: React.FC<ProductCardProps> = ({ productName, price, img }) =
 
                         <form>
 
-                          <fieldset aria-label="Choose a color">
+                          {/* <fieldset aria-label="Choose a color">
                             <legend className="text-sm font-medium text-gray-900">Color</legend>
 
                             <div className="mt-4 flex items-center space-x-3">
@@ -121,37 +121,25 @@ const Productmodal: React.FC<ProductCardProps> = ({ productName, price, img }) =
 
                                 <span className="pointer-events-none absolute -inset-px rounded-md" aria-hidden="true"></span>
                               </label>
-                              {/* <!-- Active: "ring-2 ring-indigo-500" --> */}
+                          
                               <label className="group relative flex cursor-pointer items-center justify-center rounded-md border bg-white px-4 py-3 text-sm font-medium uppercase text-gray-900 shadow-sm hover:bg-gray-50 focus:outline-none sm:flex-1">
                                 <input type="radio" name="size-choice" value="M" className="sr-only" />
                                 <span>M</span>
-                                {/* <!--
-                   Active: "border", Not Active: "border-2"
-                   Checked: "border-indigo-500", Not Checked: "border-transparent"
-                 --> */}
+                              
                                 <span className="pointer-events-none absolute -inset-px rounded-md" aria-hidden="true"></span>
                               </label>
-                              {/* <!-- Active: "ring-2 ring-indigo-500" --> */}
+                           
                               <label className="group relative flex cursor-pointer items-center justify-center rounded-md border bg-white px-4 py-3 text-sm font-medium uppercase text-gray-900 shadow-sm hover:bg-gray-50 focus:outline-none sm:flex-1">
                                 <input type="radio" name="size-choice" value="L" className="sr-only" />
                                 <span>L</span>
-                                {/* <!--
-                   Active: "border", Not Active: "border-2"
-                   Checked: "border-indigo-500", Not Checked: "border-transparent"
-                 --> */}
+                                
                                 <span className="pointer-events-none absolute -inset-px rounded-md" aria-hidden="true"></span>
                               </label>
-                              {/* <!-- Active: "ring-2 ring-indigo-500" --> */}
                               <label className="group relative flex cursor-pointer items-center justify-center rounded-md border bg-white px-4 py-3 text-sm font-medium uppercase text-gray-900 shadow-sm hover:bg-gray-50 focus:outline-none sm:flex-1">
                                 <input type="radio" name="size-choice" value="XL" className="sr-only" />
                                 <span>XL</span>
-                                {/* <!--
-                   Active: "border", Not Active: "border-2"
-                   Checked: "border-indigo-500", Not Checked: "border-transparent"
-                 --> */}
                                 <span className="pointer-events-none absolute -inset-px rounded-md" aria-hidden="true"></span>
                               </label>
-                              {/* <!-- Active: "ring-2 ring-indigo-500" --> */}
                               <label className="group relative flex cursor-pointer items-center justify-center rounded-md border bg-white px-4 py-3 text-sm font-medium uppercase text-gray-900 shadow-sm hover:bg-gray-50 focus:outline-none sm:flex-1">
                                 <input type="radio" name="size-choice" value="XXL" className="sr-only" />
                                 <span>XXL</span>
@@ -168,7 +156,7 @@ const Productmodal: React.FC<ProductCardProps> = ({ productName, price, img }) =
                                 </span>
                               </label>
                             </div>
-                          </fieldset>
+                          </fieldset> */}
 
                           <button type="submit" className="mt-6 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Add to Cart</button>
                         </form>

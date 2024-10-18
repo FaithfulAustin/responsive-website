@@ -1,6 +1,6 @@
 export const navLinks = [
     { name: "Products", 
-     path: "/product" 
+     path: "/products" 
     },
     {
       name: "Sell",
